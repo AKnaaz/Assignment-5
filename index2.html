@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="assets/assignmentpng.png" type="image/x-icon">
     <title>ASSIGNMENT-5</title>
 </head>
 <body>
+    <header class="py-4 px-10 bg-yellow-50">
+        <nav class="flex justify-between items-center">
+            <div class="flex items-center">
+                <img class="w-7" src="./assets/logo.png" alt=""> 
+                <h1>Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <button class="btn btn-primary">Back to Desk</button> 
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="font-extrabold text-center mt-8 text-lg">Blogs</h1>
+        <div class="m-16 space-y-16">
+            <div class="font-bold">
+                Question-1: What are the different ways to select an element in the DOM?
+                <p class="my-5">ডোম-এ একটি এলিমেন্ট সিলেক্ট করার বিভিন্ন উপায় নিচে দেওয়া হলো- <br>
+                    ১.আইডি দ্বারা সিলেক্ট করা (getElementById()), <br>
+                    ২.ক্লাস নেম দ্বারা সিলেক্ট করা (getElementsByClassName()), <br>
+                    ৩.সিএসএস সিলেক্টর দ্বারা সিলেক্ট করা (querySelector(), querySelectorAll()), <br>
+                    ৪.ট্যাগ নেম দ্বারা সিলেক্ট করা (getElementsByTagName()), <br> 
+                    ৫. অ্যাট্রিবিউট দ্বারা সিলেক্ট করা (getElementsByName()),
+                </p>
+            </div>
+    
+            <div class="font-bold">
+                Question-2: What is the difference between innerHTML, innerText, and textContent ?
+                <p class="my-5">innerHTML, innerText, এবং textContent এর মধ্যে পার্থক্যগুলো নিচে দেয়া হলো- <br>
+                    ১. innerHTML- এই প্রপার্টি ব্যবহার করে কোনো এলিমেন্টের মধ্যে থাকা সব HTML ট্যাগ ও কন্টেন্ট দেখা এবং পরিবর্তন করা যাই। <br> 
+                    ২. innerText- এই প্রপার্টি ব্যবহার করে কোনো এলিমেন্টের শুদু ভেতরের টেক্সটগুলো পাওয়া যাই। <br> 
+                    ৩. textContent- এই প্রপার্টি ব্যবহার করে কোনো এলিমেন্টের মধ্যে থাকা সকল টেক্সট নোডকে একত্রে পাওয়া যাই।
+                </p>
+            </div>
+
+            <div class="font-bold">
+                Question-3: What is event delegation in the DOM?
+                <p class="my-5"></p>
+            </div>
+
+            <div class="font-bold">
+                Question-4: What is event bubbling in the DOM?
+                <p class="my-5"></p>
+            </div>
+
+            <div class="font-bold">
+                Question-5: How do you create, add, and remove elements using JavaScript?
+                <p class="my-5"></p>
+            </div>
+        </div>
+       
+    </main>
     <script src="./js/script.js"></script>
 </body>
 </html>
