@@ -28,9 +28,20 @@ document.getElementById("bg-btn").addEventListener("click", function() {
 });
 
 
-let date = new Date();
-let currentDate = date.toLocaleDateString();
-document.getElementById("date").innerText = currentDate;
+const today = new Date();
+
+const currentWeekday = { weekday: 'short' };
+const weekday = today.toLocaleDateString('en-US', currentWeekday);
+
+const currentDate = { year: 'numeric', month: 'short', day: '2-digit' };
+const date = today.toLocaleDateString('en-US', currentDate);
+
+const formattedDate = `${weekday},\n${date.replace(',', '')}`;
+
+console.log(formattedDate);
+
+document.getElementById("date").innerText = formattedDate;
+
 
 
 const completeBtn = document.querySelectorAll(".complete-btn");
@@ -63,7 +74,7 @@ document.addEventListener("click", function(event) {
         const activityLog = document.getElementById("activity-log");
         const p = document.createElement("p");
         p.innerText = `You have completed the task "${cardTitle}" at ${time}`;
-        p.classList.add("mt-3", "text-indigo-600");
+        p.classList.add("mt-3", "text-indigo-600", "bg-[#F4F7FF]", "rounded-md");
         activityLog.appendChild(p);
 
         event.target.disabled = true;
@@ -80,7 +91,7 @@ document.addEventListener("click", function(event) {
 
     if(event.target.id === "clear-btn") {
         const activityLog = document.getElementById("activity-log" );
-        const logs = document.querySelectorAll("p");
+        const logs = activityLog.querySelectorAll("p");
         for(let i = 0; i < logs.length; i++) {
             logs[i].remove();
         }
